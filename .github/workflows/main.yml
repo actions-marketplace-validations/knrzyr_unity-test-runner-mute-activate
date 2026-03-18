@@ -62,7 +62,7 @@ jobs:
           testMode: ${{ matrix.testMode }}
           artifactsPath: ${{ matrix.testMode }}-artifacts
           customParameters: -profile SomeProfile -someBoolean -someValue exampleValue
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v7
         with:
           name: Test results for ${{ matrix.testMode }}
           path: ${{ steps.tests.outputs.artifactsPath }}
@@ -110,7 +110,7 @@ jobs:
 
       # Upload artifacts
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Test results (all)
           path: ${{ steps.allTests.outputs.artifactsPath }}
@@ -118,7 +118,7 @@ jobs:
 
       # Upload coverage
       - name: Upload coverage results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Coverage results (all)
           path: ${{ steps.allTests.outputs.coveragePath }}
@@ -165,7 +165,7 @@ jobs:
 
       # Upload artifacts
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Test results (edit mode)
           path: ${{ steps.editMode.outputs.artifactsPath }}
@@ -173,7 +173,7 @@ jobs:
 
       # Upload coverage
       - name: Upload coverage results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Coverage results (edit mode)
           path: ${{ steps.editMode.outputs.coveragePath }}
@@ -220,7 +220,7 @@ jobs:
 
       # Upload artifacts
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Test results (play mode)
           path: ${{ steps.playMode.outputs.artifactsPath }}
@@ -228,7 +228,7 @@ jobs:
 
       # Upload coverage
       - name: Upload coverage results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Coverage results (play mode)
           path: ${{ steps.playMode.outputs.coveragePath }}
@@ -283,7 +283,7 @@ jobs:
 
       # Upload combined artifacts
       - name: Upload combined test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Test results (combined)
           path: artifacts/
