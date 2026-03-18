@@ -48,7 +48,7 @@ jobs:
       ###########################
       #          Cache          #
       ###########################
-      - uses: actions/cache@v3
+      - uses: actions/cache@v5
         with:
           path: ${{ matrix.projectPath }}/Library
           key: Library-${{ matrix.projectPath }}
@@ -89,7 +89,7 @@ jobs:
       ###########################
       #          Cache          #
       ###########################
-      - uses: actions/cache@v3
+      - uses: actions/cache@v5
         with:
           path: ${{ matrix.projectPath }}/Library
           key: Library-${{ matrix.projectPath }}-${{ matrix.targetPlatform }}
@@ -145,7 +145,7 @@ jobs:
       ###########################
       #          Cache          #
       ###########################
-      - uses: actions/cache@v3
+      - uses: actions/cache@v5
         with:
           path: ${{ matrix.projectPath }}/Library
           key: Library-${{ matrix.projectPath }}-${{ matrix.targetPlatform }}
@@ -200,7 +200,7 @@ jobs:
       ###########################
       #          Cache          #
       ###########################
-      - uses: actions/cache@v3
+      - uses: actions/cache@v5
         with:
           path: ${{ matrix.projectPath }}/Library
           key: Library-${{ matrix.projectPath }}-${{ matrix.targetPlatform }}
@@ -255,7 +255,7 @@ jobs:
       ###########################
       #          Cache          #
       ###########################
-      - uses: actions/cache@v3
+      - uses: actions/cache@v5
         with:
           path: ${{ matrix.projectPath }}/Library
           key: Library-${{ matrix.projectPath }}-${{ matrix.targetPlatform }}
